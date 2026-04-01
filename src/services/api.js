@@ -5,9 +5,13 @@
 
 const getApiBase = () => {
     if (import.meta.env.VITE_API_URL) return import.meta.env.VITE_API_URL;
-    // Use the proxy path during local development
-    if (import.meta.env.DEV) return '/api';
-    // Use the absolute URL as a fallback for production/deployment
+    
+    // Use the proxy (/api) if running in dev mode
+    if (import.meta.env.DEV) {
+        return '/api';
+    }
+    
+    // Otherwise, use the full production URL
     return 'http://180.235.121.245/2026JanMarch/respireai/api';
 };
 
