@@ -5,8 +5,10 @@
 
 const getApiBase = () => {
     if (import.meta.env.VITE_API_URL) return import.meta.env.VITE_API_URL;
-    // Fallback to proxy defined in vite.config.js during dev, or local path in prod if same-origin
-    return '/api';
+    // Use the proxy path during local development
+    if (import.meta.env.DEV) return '/api';
+    // Use the absolute URL as a fallback for production/deployment
+    return 'http://180.235.121.245/2026JanMarch/respireai/api';
 };
 
 const API_BASE = getApiBase();
