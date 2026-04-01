@@ -5,8 +5,8 @@
 
 const getApiBase = () => {
     if (import.meta.env.VITE_API_URL) return import.meta.env.VITE_API_URL;
-    // Hosted backend — no need to run XAMPP locally
-    return 'http://180.235.121.245/2026JanMarch/respireai/api';
+    // Fallback to proxy defined in vite.config.js during dev, or local path in prod if same-origin
+    return '/api';
 };
 
 const API_BASE = getApiBase();
