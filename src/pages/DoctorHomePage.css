@@ -1,0 +1,449 @@
+.doctor-home {
+    animation: fadeInUp 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.doctor-home__header {
+    margin-bottom: 8px;
+}
+
+.doctor-home__greeting {
+    color: var(--text-secondary);
+    font-size: var(--font-size-md);
+}
+
+.doctor-home__name {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+/* Stats */
+.doctor-home__stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.doctor-home__stat-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: left;
+}
+
+.doctor-home__stat-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-primary);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+}
+
+.doctor-home__stat-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.doctor-home__stat-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.doctor-home__stat-value {
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.doctor-home__stat-label {
+    font-size: var(--font-size-xs);
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+/* Sections */
+.doctor-home__section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.doctor-home__section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.doctor-home__section-header h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.doctor-home__section-header button {
+    background: none;
+    border: none;
+    color: var(--color-primary);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Next Appointment Card */
+.doctor-home__next-card {
+    background: var(--bg-card);
+    border-radius: var(--radius-xl);
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    border: 1px solid var(--border-light);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+}
+
+.doctor-home__next-card:hover {
+    border-color: #7C3AED;
+    background: rgba(124, 58, 237, 0.02);
+}
+
+.doctor-home__next-time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    padding: 16px;
+    background: rgba(124, 58, 237, 0.1);
+    border-radius: 20px;
+    color: #7C3AED;
+}
+
+.doctor-home__next-time .time {
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+.doctor-home__next-time .today {
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+.doctor-home__next-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.doctor-home__next-info .patient-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.doctor-home__next-info .reason {
+    color: var(--text-muted);
+    font-size: var(--font-size-sm);
+}
+
+.doctor-home__next-arrow {
+    color: var(--border-strong);
+}
+
+/* Priority List */
+.doctor-home__priority-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.priority-item {
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid var(--border-light);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.priority-item:hover {
+    border-color: var(--color-primary);
+    background: var(--bg-primary);
+}
+
+.priority-item__status {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.priority-item__status--critical {
+    background-color: #EF4444;
+}
+
+.priority-item__status--high-risk {
+    background-color: #F59E0B;
+}
+
+.priority-item__info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.priority-item__info .name {
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
+.priority-item__info .risk {
+    font-size: var(--font-size-xs);
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.priority-item__vitals {
+    display: flex;
+    gap: 12px;
+}
+
+.priority-item__vitals .vital {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--bg-secondary);
+    padding: 6px 12px;
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+}
+
+.priority-item__arrow {
+    color: var(--border-strong);
+}
+
+/* AI Status Card */
+.doctor-home__ai-card {
+    background: linear-gradient(135deg, var(--bg-secondary), var(--bg-primary));
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-xl);
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.doctor-home__ai-icon {
+    width: 54px;
+    height: 54px;
+    background: linear-gradient(135deg, #10B981, #06B6D4);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.doctor-home__ai-info {
+    flex: 1;
+}
+
+.doctor-home__ai-info h4 {
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.doctor-home__ai-info p {
+    font-size: var(--font-size-sm);
+    color: var(--text-muted);
+}
+
+.doctor-home__ai-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--bg-card);
+    padding: 8px 16px;
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    color: #10B981;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: #10B981;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Today's Schedule List */
+.doctor-home__appointments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.doctor-home__appointment-row {
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.doctor-home__appointment-row:hover {
+    border-color: #7C3AED;
+    background: rgba(124, 58, 237, 0.02);
+}
+
+.doctor-home__appt-time {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #7C3AED;
+    width: 70px;
+}
+
+.doctor-home__appt-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.doctor-home__appt-info .patient-name {
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
+.doctor-home__appt-info .reason {
+    font-size: var(--font-size-xs);
+    color: var(--text-muted);
+}
+
+/* Shared Vitals Grid */
+.doctor-home__shared-vitals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 16px;
+}
+
+.shared-vital-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.shared-vital-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+    border-color: var(--color-primary);
+}
+
+.shared-vital-card .patient-name {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.2;
+}
+
+.shared-vital-card .vital-stats {
+    display: flex;
+    gap: 16px;
+}
+
+.shared-vital-card .stat {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.shared-vital-card .shared-time {
+    font-size: 10px;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.shared-count {
+    background: rgba(0, 102, 204, 0.1);
+    color: var(--color-primary);
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.doctor-home__empty-card {
+    padding: 40px;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-muted);
+    font-size: var(--font-size-sm);
+}
+
+.doctor-home__empty-card.success {
+    background: rgba(16, 185, 129, 0.05);
+}
+
+.doctor-home__loading {
+    padding: 60px;
+    text-align: center;
+    color: var(--text-muted);
+}

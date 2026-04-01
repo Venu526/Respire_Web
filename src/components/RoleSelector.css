@@ -1,0 +1,66 @@
+.role-selector {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.role-selector__label {
+    font-size: var(--font-size-xs);
+    color: var(--text-secondary);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.role-selector__options {
+    display: flex;
+    gap: 12px;
+}
+
+.role-selector__btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 16px;
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-base);
+    font-weight: 500;
+    background: var(--bg-input);
+    color: var(--text-primary);
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.role-selector__btn:hover {
+    background: var(--bg-card-hover);
+}
+
+.role-selector__btn--active {
+    background: var(--color-primary);
+    color: #fff;
+    border-color: var(--color-primary);
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.25);
+}
+
+.role-selector__btn--active:hover {
+    background: var(--color-primary);
+}
+
+.role-selector__btn--doctor-active {
+    background: var(--color-green);
+    border-color: var(--color-green);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
+}
+
+.role-selector__btn--doctor-active:hover {
+    background: var(--color-green);
+}
+
+.role-selector__hint {
+    font-size: var(--font-size-xs);
+    color: var(--text-muted);
+    margin-top: 2px;
+}

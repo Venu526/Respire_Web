@@ -1,0 +1,197 @@
+.share-vitals {
+    padding-bottom: 80px;
+    animation: fadeInUp 0.5s ease-out;
+}
+
+.share-vitals__header {
+    margin-bottom: 32px;
+}
+
+.share-vitals__back {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: 16px;
+    cursor: pointer;
+    transition: color 0.2s;
+    padding: 0;
+}
+
+.share-vitals__back:hover {
+    color: var(--color-primary);
+}
+
+.share-vitals__header h1 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.share-vitals__header p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+}
+
+.share-vitals__search {
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.share-vitals__search-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+}
+
+.share-vitals__search input {
+    width: 100%;
+    padding: 14px 16px 14px 48px;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-light);
+    border-radius: 14px;
+    font-size: 1rem;
+    color: var(--text-primary);
+    transition: all 0.2s;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.share-vitals__search input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 4px rgba(0, 102, 204, 0.1);
+}
+
+.share-vitals__loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 0;
+    gap: 16px;
+}
+
+.share-vitals__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.doctor-share-card {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-light);
+    border-radius: 18px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.doctor-share-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px -8px rgba(0, 0, 0, 0.15);
+    border-color: var(--border-strong);
+}
+
+.doctor-share-card__avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 14px;
+    overflow: hidden;
+    background: var(--bg-secondary);
+}
+
+.doctor-share-card__avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.doctor-share-card__placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+}
+
+.doctor-share-card__info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.doctor-share-card__name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 2px;
+}
+
+.doctor-share-card__specialty {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.doctor-share-card__btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: 12px;
+    border: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: var(--color-primary);
+    color: white;
+}
+
+.doctor-share-card__btn:hover:not(:disabled) {
+    filter: brightness(1.1);
+    transform: scale(1.02);
+}
+
+.doctor-share-card__btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.doctor-share-card__btn--success {
+    background: var(--color-success, #10b981) !important;
+    color: white !important;
+}
+
+.doctor-share-card__btn--success:disabled {
+    opacity: 1;
+    /* Keep it fully visible so it looks like a confirmed state, not a deactivated typical button */
+    cursor: default;
+}
+
+.share-vitals__empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 0;
+    color: var(--text-muted);
+}
+
+@media (max-width: 640px) {
+    .share-vitals__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .doctor-share-card {
+        padding: 16px;
+    }
+}

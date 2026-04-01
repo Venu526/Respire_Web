@@ -1,0 +1,90 @@
+.gradient-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 28px;
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.gradient-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0);
+    transition: background var(--transition-fast);
+}
+
+.gradient-btn:hover::before {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.gradient-btn:active {
+    transform: scale(0.98);
+}
+
+.gradient-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.gradient-btn--full {
+    width: 100%;
+}
+
+/* Variants */
+.gradient-btn--primary {
+    background: linear-gradient(135deg, #0066CC, #0088E0);
+    box-shadow: 0 4px 16px rgba(0, 102, 204, 0.3);
+}
+
+.gradient-btn--doctor {
+    background: linear-gradient(135deg, #10B981, #009966);
+    box-shadow: 0 4px 16px rgba(16, 185, 129, 0.3);
+}
+
+.gradient-btn--purple {
+    background: linear-gradient(135deg, #7C3AED, #5B21B6);
+    box-shadow: 0 4px 16px rgba(124, 58, 237, 0.3);
+}
+
+.gradient-btn--danger {
+    background: linear-gradient(135deg, #EF4444, #DC2626);
+    box-shadow: 0 4px 16px rgba(239, 68, 68, 0.3);
+}
+
+.gradient-btn--outline {
+    background: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    box-shadow: none;
+}
+
+.gradient-btn--outline:hover::before {
+    background: rgba(0, 102, 204, 0.05);
+}
+
+/* Icon */
+.gradient-btn__icon {
+    display: flex;
+    align-items: center;
+}
+
+/* Spinner */
+.gradient-btn__spinner {
+    width: 22px;
+    height: 22px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+}

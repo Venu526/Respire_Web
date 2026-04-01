@@ -1,0 +1,83 @@
+.input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.input-field__label {
+    font-size: var(--font-size-xs);
+    color: var(--text-secondary);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.input-field__wrapper {
+    display: flex;
+    align-items: center;
+    background: var(--bg-input);
+    border-radius: var(--radius-md);
+    border: 2px solid transparent;
+    transition: all var(--transition-fast);
+    overflow: hidden;
+}
+
+.input-field__wrapper:focus-within {
+    border-color: var(--color-primary);
+    background: var(--bg-primary);
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+.input-field__wrapper--error {
+    border-color: #ff3b30; /* iOS Red */
+    background-color: rgba(255, 59, 48, 0.04);
+}
+
+.input-field__wrapper--error:focus-within {
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.input-field__wrapper--disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.input-field__icon {
+    display: flex;
+    align-items: center;
+    padding-left: 14px;
+    color: var(--text-muted);
+}
+
+.input-field__input {
+    width: 100%;
+    padding: 14px 16px;
+    background: transparent;
+    border: none;
+    font-size: var(--font-size-base);
+    color: var(--text-primary);
+}
+
+.input-field__input::placeholder {
+    color: var(--text-muted);
+}
+
+.input-field__input:disabled {
+    cursor: not-allowed;
+}
+
+.input-field__error {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    color: #ff3b30; /* iOS Red */
+    font-weight: 600;
+    margin-top: 2px;
+    animation: fadeInError 0.2s ease-out;
+}
+
+@keyframes fadeInError {
+    from { opacity: 0; transform: translateY(-4px); }
+    to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,237 @@
+/* ====================================================
+   Login Page — Matches iOS LoginView
+   ==================================================== */
+
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-secondary);
+    position: relative;
+    overflow: hidden;
+}
+
+/* ── Decorative Background ── */
+.login-page__bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.login-page__bg-circle {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4;
+}
+
+.login-page__bg-circle--1 {
+    width: 500px;
+    height: 500px;
+    background: var(--color-primary);
+    top: -200px;
+    right: -100px;
+    opacity: 0.08;
+}
+
+.login-page__bg-circle--2 {
+    width: 400px;
+    height: 400px;
+    background: var(--color-cyan);
+    bottom: -150px;
+    left: -100px;
+    opacity: 0.06;
+}
+
+/* ── Container ── */
+.login-page__container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 600px;
+    margin: 24px;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+    background: var(--bg-primary);
+}
+
+/* ── Branding Side ── */
+.login-page__branding {
+    display: none;
+    width: 45%;
+    background: linear-gradient(135deg, #0D2659, #1A408D, #0066CC);
+    padding: 48px;
+    position: relative;
+    overflow: hidden;
+}
+
+.login-page__branding::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: rgba(0, 188, 212, 0.15);
+    top: 20%;
+    left: -50px;
+    filter: blur(60px);
+}
+
+.login-page__branding-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    color: #fff;
+}
+
+.login-page__branding-logo {
+    margin-bottom: 24px;
+}
+
+.login-page__branding-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.login-page__branding-title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.login-page__branding-subtitle {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1rem;
+    margin-bottom: 36px;
+}
+
+.login-page__branding-features {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.login-page__branding-feature {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.login-page__branding-check {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    flex-shrink: 0;
+}
+
+/* ── Form Side ── */
+.login-page__form-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 24px;
+}
+
+.login-page__form {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: fadeInUp 0.5s ease;
+}
+
+.login-page__header h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+}
+
+.login-page__header p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.login-page__error {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    background: rgba(239, 68, 68, 0.08);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    border-radius: var(--radius-md);
+    color: var(--color-red);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    animation: fadeIn 0.3s ease;
+}
+
+.login-page__forgot {
+    text-align: right;
+    margin-top: -8px;
+}
+
+.login-page__forgot a {
+    font-size: var(--font-size-sm);
+    color: var(--color-primary);
+    font-weight: 500;
+}
+
+.login-page__forgot a:hover {
+    text-decoration: underline;
+}
+
+.login-page__signup {
+    text-align: center;
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+}
+
+.login-page__signup a {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.login-page__signup a:hover {
+    text-decoration: underline;
+}
+
+/* ── Responsive ── */
+@media (min-width: 768px) {
+    .login-page__form-section {
+        padding: 48px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .login-page__branding {
+        display: flex;
+    }
+}

@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy – RespireAI</title>
+    <meta name="description" content="RespireAI Privacy Policy – Learn how we collect, use, and protect your health data with industry-leading security practices." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        /* ─── Reset & Base ─── */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #F8FAFC;
+            color: #1E293B;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ─── Header / Hero ─── */
+        .hero {
+            background: linear-gradient(135deg, #0F172A 0%, #1E3A5F 50%, #0E4DA4 100%);
+            color: #fff;
+            padding: 60px 24px 50px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 40%, rgba(56, 189, 248, 0.08) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 60%, rgba(99, 102, 241, 0.06) 0%, transparent 50%);
+            animation: float 20s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(-20px, 15px); }
+        }
+        .hero-content { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; }
+        .hero-logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #fff;
+        }
+        .hero-logo svg { width: 38px; height: 38px; }
+        .hero-logo span {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+        .hero h1 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 10px;
+        }
+        .hero .subtitle {
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.7);
+            font-weight: 400;
+        }
+        .effective-date {
+            display: inline-block;
+            margin-top: 16px;
+            padding: 6px 16px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.8);
+            backdrop-filter: blur(8px);
+        }
+
+        /* ─── Container ─── */
+        .container {
+            max-width: 780px;
+            margin: -30px auto 60px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* ─── Table of Contents ─── */
+        .toc {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 32px;
+            margin-bottom: 28px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.04);
+            border: 1px solid #E2E8F0;
+        }
+        .toc h2 {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #94A3B8;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+        .toc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px 24px;
+        }
+        .toc a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: #334155;
+            font-size: 0.88rem;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+        .toc a:hover {
+            background: #F1F5F9;
+            color: #0E4DA4;
+        }
+        .toc a .num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 22px;
+            height: 22px;
+            border-radius: 6px;
+            background: #EFF6FF;
+            color: #0E4DA4;
+            font-size: 0.7rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        /* ─── Sections ─── */
+        .section {
+            background: #fff;
+            border-radius: 16px;
+            padding: 32px 36px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.04);
+            border: 1px solid #E2E8F0;
+            transition: box-shadow 0.3s;
+        }
+        .section:hover {
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 12px 32px rgba(0,0,0,0.07);
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 18px;
+        }
+        .section-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .section-icon svg { width: 20px; height: 20px; }
+        .section-icon.blue   { background: #EFF6FF; color: #2563EB; }
+        .section-icon.green  { background: #F0FDF4; color: #16A34A; }
+        .section-icon.purple { background: #F5F3FF; color: #7C3AED; }
+        .section-icon.amber  { background: #FFFBEB; color: #D97706; }
+        .section-icon.rose   { background: #FFF1F2; color: #E11D48; }
+        .section-icon.teal   { background: #F0FDFA; color: #0D9488; }
+        .section-icon.indigo { background: #EEF2FF; color: #4F46E5; }
+        .section-icon.sky    { background: #F0F9FF; color: #0284C7; }
+        .section-icon.slate  { background: #F1F5F9; color: #475569; }
+
+        .section h2 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #0F172A;
+            letter-spacing: -0.3px;
+        }
+        .section p {
+            font-size: 0.92rem;
+            color: #475569;
+            margin-bottom: 14px;
+        }
+        .section ul {
+            list-style: none;
+            padding: 0;
+            margin: 14px 0;
+        }
+        .section ul li {
+            position: relative;
+            padding: 8px 0 8px 26px;
+            font-size: 0.92rem;
+            color: #475569;
+        }
+        .section ul li::before {
+            content: '';
+            position: absolute;
+            left: 4px;
+            top: 16px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #CBD5E1;
+        }
+
+        /* Sub-headings inside sections */
+        .section h3 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #1E293B;
+            margin: 20px 0 8px;
+        }
+
+        /* Highlight box */
+        .highlight-box {
+            background: #F8FAFC;
+            border-left: 3px solid #0E4DA4;
+            padding: 16px 20px;
+            border-radius: 0 10px 10px 0;
+            margin: 16px 0;
+            font-size: 0.88rem;
+            color: #334155;
+        }
+
+        /* ─── Contact Card ─── */
+        .contact-card {
+            background: linear-gradient(135deg, #0F172A 0%, #1E3A5F 100%);
+            color: #fff;
+            border-radius: 16px;
+            padding: 36px;
+            text-align: center;
+            margin-top: 8px;
+        }
+        .contact-card h2 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .contact-card p {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+        .contact-card a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #fff;
+            padding: 10px 24px;
+            border-radius: 10px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        .contact-card a:hover { background: rgba(255,255,255,0.2); }
+
+        /* ─── Footer ─── */
+        .footer {
+            text-align: center;
+            padding: 24px;
+            color: #94A3B8;
+            font-size: 0.78rem;
+        }
+        .footer a { color: #64748B; text-decoration: none; }
+        .footer a:hover { color: #0E4DA4; }
+
+        /* ─── Responsive ─── */
+        @media (max-width: 640px) {
+            .hero { padding: 48px 20px 40px; }
+            .hero h1 { font-size: 1.65rem; }
+            .container { padding: 0 14px; }
+            .section { padding: 24px 22px; }
+            .toc-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ═══ Hero ═══ -->
+    <header class="hero">
+        <div class="hero-content">
+            <a href="#" class="hero-logo">
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="40" height="40" rx="10" fill="rgba(255,255,255,0.15)"/>
+                    <path d="M20 8C14 8 10 13 10 18c0 4 2 7 5 9l5 5 5-5c3-2 5-5 5-9 0-5-4-10-10-10z" stroke="#fff" stroke-width="2" fill="none"/>
+                    <path d="M14 20h3l2-4 2 8 2-6 2 2h3" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>RespireAI</span>
+            </a>
+            <h1>Privacy Policy</h1>
+            <p class="subtitle">Your trust is the foundation of everything we build. Here's how we protect it.</p>
+            <span class="effective-date">Effective Date: March 31, 2026</span>
+        </div>
+    </header>
+
+    <!-- ═══ Content ═══ -->
+    <main class="container">
+
+        <!-- Table of Contents -->
+        <nav class="toc">
+            <h2>Table of Contents</h2>
+            <div class="toc-grid">
+                <a href="#introduction"><span class="num">1</span> Introduction</a>
+                <a href="#data-collection"><span class="num">2</span> Data We Collect</a>
+                <a href="#data-usage"><span class="num">3</span> How We Use Your Data</a>
+                <a href="#data-sharing"><span class="num">4</span> Data Sharing &amp; Disclosure</a>
+                <a href="#data-security"><span class="num">5</span> Data Security</a>
+                <a href="#data-retention"><span class="num">6</span> Data Retention</a>
+                <a href="#your-rights"><span class="num">7</span> Your Rights</a>
+                <a href="#third-party"><span class="num">8</span> Third-Party Services</a>
+                <a href="#children"><span class="num">9</span> Children's Privacy</a>
+                <a href="#changes"><span class="num">10</span> Policy Updates</a>
+            </div>
+        </nav>
+
+        <!-- 1. Introduction -->
+        <section class="section" id="introduction">
+            <div class="section-header">
+                <div class="section-icon blue">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                </div>
+                <h2>1. Introduction</h2>
+            </div>
+            <p>Welcome to <strong>RespireAI</strong> ("we," "our," or "us"). RespireAI is an AI‑powered respiratory health monitoring application designed to help patients and healthcare providers track, analyze, and manage respiratory health data.</p>
+            <p>This Privacy Policy explains how we collect, use, disclose, and safeguard your personal and health information when you use our mobile application, web platform, and related services (collectively, the "Services"). By using RespireAI, you agree to the practices described in this policy.</p>
+            <div class="highlight-box">
+                <strong>Medical Disclaimer:</strong> RespireAI is intended for health monitoring and informational purposes only. It does not replace professional medical advice, diagnosis, or treatment. Always consult a qualified healthcare provider for medical decisions.
+            </div>
+        </section>
+
+        <!-- 2. Data We Collect -->
+        <section class="section" id="data-collection">
+            <div class="section-header">
+                <div class="section-icon green">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                </div>
+                <h2>2. Data We Collect</h2>
+            </div>
+
+            <h3>a) Personal Information</h3>
+            <ul>
+                <li>Full name, email address, and phone number</li>
+                <li>Date of birth, gender, and profile photo (optional)</li>
+                <li>Account credentials (password stored in hashed form)</li>
+                <li>Role designation (Patient or Healthcare Provider)</li>
+            </ul>
+
+            <h3>b) Health &amp; Vital Signs Data</h3>
+            <ul>
+                <li>Respiratory rate, SpO₂ (blood oxygen saturation), and heart rate</li>
+                <li>Temperature, blood pressure, and peak flow readings</li>
+                <li>Height, weight, BMI, and related body metrics</li>
+                <li>Data synced from Apple HealthKit (with your explicit permission)</li>
+            </ul>
+
+            <h3>c) Usage &amp; Device Data</h3>
+            <ul>
+                <li>Device type, operating system, and app version</li>
+                <li>Interaction logs (features used, session duration)</li>
+                <li>Crash reports and performance diagnostics</li>
+            </ul>
+        </section>
+
+        <!-- 3. How We Use Your Data -->
+        <section class="section" id="data-usage">
+            <div class="section-header">
+                <div class="section-icon purple">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                </div>
+                <h2>3. How We Use Your Data</h2>
+            </div>
+            <ul>
+                <li><strong>Health Monitoring:</strong> Display your vital signs trends and historical data for self-tracking and doctor review</li>
+                <li><strong>AI-Powered Risk Assessment:</strong> Analyze your vitals using machine learning models to generate personalized respiratory risk scores and early warning alerts</li>
+                <li><strong>Doctor-Patient Connectivity:</strong> Share your health records securely with your assigned healthcare providers for remote consultations</li>
+                <li><strong>Notifications &amp; Alerts:</strong> Send timely alerts when your vitals indicate potential health concerns</li>
+                <li><strong>Service Improvement:</strong> Aggregate anonymized data to enhance our AI models and improve overall app experience</li>
+                <li><strong>Account Management:</strong> Authenticate users, process password changes, and manage account preferences</li>
+            </ul>
+        </section>
+
+        <!-- 4. Data Sharing -->
+        <section class="section" id="data-sharing">
+            <div class="section-header">
+                <div class="section-icon amber">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <h2>4. Data Sharing &amp; Disclosure</h2>
+            </div>
+            <p>We do <strong>not</strong> sell your personal or health data. We may share information only in the following circumstances:</p>
+            <ul>
+                <li><strong>With Your Healthcare Providers:</strong> When you explicitly link with a doctor through the app, relevant health data is shared to facilitate care</li>
+                <li><strong>Service Providers:</strong> Trusted third-party vendors who help us operate the service (hosting, email delivery) under strict data protection agreements</li>
+                <li><strong>Legal Requirements:</strong> When required by law, regulation, or valid legal process</li>
+                <li><strong>Safety:</strong> To protect the rights, safety, or property of RespireAI, our users, or the public</li>
+            </ul>
+        </section>
+
+        <!-- 5. Data Security -->
+        <section class="section" id="data-security">
+            <div class="section-header">
+                <div class="section-icon teal">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <h2>5. Data Security</h2>
+            </div>
+            <p>We implement industry-standard security measures to protect your information:</p>
+            <ul>
+                <li><strong>Encryption:</strong> All data is encrypted in transit (TLS/SSL) and at rest (AES-256)</li>
+                <li><strong>Secure Authentication:</strong> Passwords are hashed using bcrypt; JWT-based session management ensures secure access</li>
+                <li><strong>Access Control:</strong> Role-based access ensures that only authorized healthcare providers can view patient records</li>
+                <li><strong>Regular Audits:</strong> We conduct periodic security assessments and vulnerability testing</li>
+                <li><strong>HIPAA Alignment:</strong> Our practices are designed to align with HIPAA security and privacy standards for health data</li>
+            </ul>
+            <div class="highlight-box">
+                While we take every reasonable precaution to protect your data, no method of electronic storage or transmission is 100% secure. We encourage you to use strong passwords and keep your account credentials confidential.
+            </div>
+        </section>
+
+        <!-- 6. Data Retention -->
+        <section class="section" id="data-retention">
+            <div class="section-header">
+                <div class="section-icon indigo">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <h2>6. Data Retention</h2>
+            </div>
+            <p>We retain your personal and health data for as long as your account is active or as needed to provide you with our Services. Specifically:</p>
+            <ul>
+                <li><strong>Active Accounts:</strong> Data is retained throughout the period your account remains active</li>
+                <li><strong>Account Deletion:</strong> Upon account deletion, all personal and health data is permanently removed from our systems within 30 days</li>
+                <li><strong>Anonymized Data:</strong> Aggregated, de-identified data used for research and service improvement may be retained indefinitely</li>
+            </ul>
+        </section>
+
+        <!-- 7. Your Rights -->
+        <section class="section" id="your-rights">
+            <div class="section-header">
+                <div class="section-icon rose">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                </div>
+                <h2>7. Your Rights</h2>
+            </div>
+            <p>You have full control over your data. As a RespireAI user, you may:</p>
+            <ul>
+                <li><strong>Access:</strong> View all personal and health data stored in your account at any time through the app</li>
+                <li><strong>Correction:</strong> Update or correct your personal information via your Profile settings</li>
+                <li><strong>Deletion:</strong> Request permanent deletion of your account and all associated data from Settings → Delete Account</li>
+                <li><strong>Data Export:</strong> Request a copy of your health records in a portable format</li>
+                <li><strong>Withdraw Consent:</strong> Revoke HealthKit permissions or disable data sharing at any time through your device settings</li>
+                <li><strong>Opt-Out:</strong> Disable AI alerts and notifications from App Preferences</li>
+            </ul>
+            <p>To exercise any of these rights, contact us at <a href="mailto:privacy@respireai.com" style="color:#0E4DA4; font-weight:600; text-decoration:none;">privacy@respireai.com</a>.</p>
+        </section>
+
+        <!-- 8. Third-Party Services -->
+        <section class="section" id="third-party">
+            <div class="section-header">
+                <div class="section-icon sky">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                </div>
+                <h2>8. Third-Party Services</h2>
+            </div>
+            <p>Our app may integrate or interact with the following third-party services:</p>
+            <ul>
+                <li><strong>Apple HealthKit:</strong> With your permission, we read and sync health data from HealthKit. We do not share HealthKit data with third parties or use it for advertising</li>
+                <li><strong>Email Services (SMTP):</strong> Used solely for account verification, password resets, and critical health alerts</li>
+                <li><strong>Cloud Hosting:</strong> Data is stored on secure, industry-standard cloud infrastructure</li>
+            </ul>
+            <p>Each third-party service operates under its own privacy policy. We encourage you to review their policies for full details.</p>
+        </section>
+
+        <!-- 9. Children's Privacy -->
+        <section class="section" id="children">
+            <div class="section-header">
+                <div class="section-icon slate">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                </div>
+                <h2>9. Children's Privacy</h2>
+            </div>
+            <p>RespireAI is not intended for use by individuals under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that a child under 13 has provided us with personal data, we will take immediate steps to delete such information. If you believe a child has provided us with their data, please contact us immediately.</p>
+        </section>
+
+        <!-- 10. Policy Updates -->
+        <section class="section" id="changes">
+            <div class="section-header">
+                <div class="section-icon blue">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                </div>
+                <h2>10. Policy Updates</h2>
+            </div>
+            <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, or legal requirements. When we make significant changes:</p>
+            <ul>
+                <li>We will update the "Effective Date" at the top of this policy</li>
+                <li>We will notify you via in-app notification or email</li>
+                <li>Continued use of the Services after changes constitutes acceptance of the updated policy</li>
+            </ul>
+            <p>We encourage you to review this page periodically to stay informed about how we protect your data.</p>
+        </section>
+
+        <!-- Contact Card -->
+        <div class="contact-card">
+            <h2>Questions or Concerns?</h2>
+            <p>We're here to help. Reach out to our privacy team anytime.</p>
+            <a href="mailto:privacy@respireai.com">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                privacy@respireai.com
+            </a>
+        </div>
+
+        <!-- Contact Us Section -->
+        <section class="section" id="contact-us" style="margin-top: 20px;">
+            <div class="section-header">
+                <div class="section-icon blue">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                </div>
+                <h2>Contact Us</h2>
+            </div>
+            <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your personal data, please don't hesitate to reach out to us through any of the following channels:</p>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 20px;">
+                <!-- Email -->
+                <div style="background: #F8FAFC; border-radius: 12px; padding: 20px; border: 1px solid #E2E8F0;">
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                        <div style="width: 36px; height: 36px; border-radius: 10px; background: #EFF6FF; display: flex; align-items: center; justify-content: center;">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <strong style="font-size: 0.88rem; color: #1E293B;">Email</strong>
+                    </div>
+                    <a href="mailto:venugorantla08@gmail.com" style="color: #0E4DA4; font-size: 0.85rem; text-decoration: none; font-weight: 500;">venugorantla08@gmail.com</a>
+                </div>
+
+                <!-- Phone -->
+                <div style="background: #F8FAFC; border-radius: 12px; padding: 20px; border: 1px solid #E2E8F0;">
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                        <div style="width: 36px; height: 36px; border-radius: 10px; background: #F0FDF4; display: flex; align-items: center; justify-content: center;">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </div>
+                        <strong style="font-size: 0.88rem; color: #1E293B;">Phone</strong>
+                    </div>
+                    <span style="color: #475569; font-size: 0.85rem;">+91 6304331744</span>
+                </div>
+
+                <!-- Address -->
+                <div style="background: #F8FAFC; border-radius: 12px; padding: 20px; border: 1px solid #E2E8F0;">
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                        <div style="width: 36px; height: 36px; border-radius: 10px; background: #F5F3FF; display: flex; align-items: center; justify-content: center;">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <strong style="font-size: 0.88rem; color: #1E293B;">Address</strong>
+                    </div>
+                    <span style="color: #475569; font-size: 0.85rem; line-height: 1.5;">RespireAI Technologies<br/>Chennai, Tamil Nadu<br/>India</span>
+                </div>
+
+                <!-- Business Hours -->
+                <div style="background: #F8FAFC; border-radius: 12px; padding: 20px; border: 1px solid #E2E8F0;">
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                        <div style="width: 36px; height: 36px; border-radius: 10px; background: #FFFBEB; display: flex; align-items: center; justify-content: center;">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <strong style="font-size: 0.88rem; color: #1E293B;">Business Hours</strong>
+                    </div>
+                    <span style="color: #475569; font-size: 0.85rem; line-height: 1.5;">Mon – Fri: 9:00 AM – 6:00 PM IST<br/>Sat – Sun: Closed</span>
+                </div>
+            </div>
+
+            <p style="margin-top: 20px; font-size: 0.85rem; color: #64748B;">We aim to respond to all inquiries within 24–48 business hours.</p>
+        </section>
+
+    </main>
+
+    <!-- ═══ Footer ═══ -->
+    <footer class="footer">
+        <p>&copy; 2026 RespireAI. All rights reserved. &nbsp;|&nbsp; <a href="#">Terms &amp; Conditions</a></p>
+    </footer>
+
+</body>
+</html>

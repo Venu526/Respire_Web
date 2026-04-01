@@ -1,0 +1,334 @@
+/* ====================================================
+   RespireWeb — Global Design System
+   Mirrors RespireAI iOS app design language
+   ==================================================== */
+
+/* ── Google Fonts ── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* ── CSS Custom Properties (Design Tokens) ── */
+:root {
+    /* Brand Colors */
+    --color-primary: #0066CC;
+    --color-primary-light: #3399FF;
+    --color-primary-dark: #004C99;
+    --color-cyan: #00BCD4;
+    --color-cyan-light: #4DD0E1;
+    --color-purple: #7C3AED;
+    --color-purple-light: #A78BFA;
+    --color-green: #10B981;
+    --color-green-dark: #009966;
+    --color-pink: #EC4899;
+    --color-orange: #F59E0B;
+    --color-red: #EF4444;
+    --color-teal: #14B8A6;
+
+    /* Gradient Tokens */
+    --gradient-splash-start: #0D2659;
+    --gradient-splash-mid: #1A408D;
+    --gradient-splash-end: #0066CC;
+    --gradient-primary: linear-gradient(135deg, #0066CC, #00BCD4);
+    --gradient-doctor: linear-gradient(135deg, #10B981, #009966);
+    --gradient-purple: linear-gradient(135deg, #7C3AED, #3B82F6);
+
+    /* Neutral Colors */
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #F5F7FA;
+    --bg-card: rgba(0, 0, 0, 0.04);
+    --bg-card-hover: rgba(0, 0, 0, 0.07);
+    --bg-input: rgba(0, 0, 0, 0.05);
+    --text-primary: #1A1A2E;
+    --text-secondary: #64748B;
+    --text-muted: #94A3B8;
+    --border-light: rgba(0, 0, 0, 0.08);
+    --border-color: #E2E8F0;
+
+    /* Spacing */
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+    --space-2xl: 48px;
+
+    /* Radius */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 20px;
+    --radius-full: 9999px;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+    --shadow-xl: 0 12px 48px rgba(0, 0, 0, 0.15);
+    --shadow-glow-blue: 0 4px 24px rgba(0, 102, 204, 0.25);
+    --shadow-glow-purple: 0 4px 24px rgba(124, 58, 237, 0.2);
+
+    /* Typography */
+    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 2rem;
+    --font-size-4xl: 2.5rem;
+
+    /* Transitions */
+    --transition-fast: 150ms ease;
+    --transition-normal: 250ms ease;
+    --transition-slow: 400ms ease;
+
+    /* Layout */
+    --max-width: 1200px;
+    --sidebar-width: 260px;
+    --navbar-height: 64px;
+}
+
+/* ── Dark Mode ── */
+[data-theme="dark"] {
+    --bg-primary: #0F172A;
+    --bg-secondary: #1E293B;
+    --bg-card: rgba(255, 255, 255, 0.06);
+    --bg-card-hover: rgba(255, 255, 255, 0.1);
+    --bg-input: rgba(255, 255, 255, 0.08);
+    --text-primary: #F1F5F9;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+    --border-light: rgba(255, 255, 255, 0.08);
+    --border-color: #334155;
+}
+
+/* ── Accent Color Themes ── */
+[data-accent="green"] {
+    --color-primary: var(--color-green);
+    --color-primary-light: #34D399;
+    --color-primary-dark: var(--color-green-dark);
+    --gradient-primary: var(--gradient-doctor);
+}
+
+[data-accent="purple"] {
+    --color-primary: var(--color-purple);
+    --color-primary-light: var(--color-purple-light);
+    --color-primary-dark: #6D28D9;
+    --gradient-primary: var(--gradient-purple);
+}
+
+[data-accent="rose"] {
+    --color-primary: var(--color-pink);
+    --color-primary-light: #F472B6;
+    --color-primary-dark: #BE185D;
+    --gradient-primary: linear-gradient(135deg, #EC4899, #F43F5E);
+}
+
+[data-accent="orange"] {
+    --color-primary: var(--color-orange);
+    --color-primary-light: #FBBF24;
+    --color-primary-dark: #D97706;
+    --gradient-primary: linear-gradient(135deg, #F59E0B, #EA580C);
+}
+
+[data-accent="teal"] {
+    --color-primary: var(--color-teal);
+    --color-primary-light: #2DD4BF;
+    --color-primary-dark: #0F766E;
+    --gradient-primary: linear-gradient(135deg, #14B8A6, #06B6D4);
+}
+
+
+/* ── Reset & Base ── */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: var(--font-family);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+a:hover {
+    color: var(--color-primary-light);
+}
+
+button {
+    cursor: pointer;
+    font-family: var(--font-family);
+    border: none;
+    outline: none;
+}
+
+input,
+select,
+textarea {
+    font-family: var(--font-family);
+    outline: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ── Utility Classes ── */
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--space-lg);
+}
+
+.text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* ── Scrollbar Styling ── */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.25);
+}
+
+/* ── Animation Keyframes ── */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes breathe {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-10vh);
+        opacity: 0;
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* ── Responsive Breakpoints ── */
+/* Usage: @media (max-width: 768px) { ... }  */
+/* Mobile: < 640px */
+/* Tablet: 640px – 1024px */
+/* Desktop: > 1024px */

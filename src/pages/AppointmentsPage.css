@@ -1,0 +1,409 @@
+.appointments-page {
+    animation: fadeIn 0.4s ease-out;
+}
+
+.appointments-page__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.appointments-page__title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin: 0 0 4px 0;
+}
+
+.appointments-page__subtitle {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin: 0;
+}
+
+.calendar-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background: var(--color-primary);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.2);
+    transition: all 0.2s ease;
+}
+
+.calendar-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 102, 204, 0.3);
+}
+
+/* Tabs */
+.appointments-tabs {
+    display: flex;
+    gap: 32px;
+    border-bottom: 1px solid var(--border-light);
+    margin-bottom: 24px;
+}
+
+.nav-tab {
+    padding: 12px 4px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-tab:hover {
+    color: var(--text-primary);
+}
+
+.nav-tab--active {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
+}
+
+.tab-count {
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+.nav-tab--active .tab-count {
+    background: rgba(0, 102, 204, 0.1);
+    color: var(--color-primary);
+}
+
+/* List & Cards */
+.appointments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.appt-card {
+    display: flex;
+    background: var(--bg-primary);
+    border-radius: 20px;
+    border: 1px solid var(--border-light);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.2s ease;
+}
+
+.appt-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-primary-light);
+}
+
+.appt-card__time-col {
+    width: 100px;
+    padding: 20px;
+    background: var(--bg-secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    border-right: 1px solid var(--border-light);
+}
+
+.appt-card__time {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    white-space: nowrap;
+}
+
+.appt-card__date {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.appt-card__content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.appt-card__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.appt-card__patient {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.appt-card__avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--color-primary), #00BCD4);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1rem;
+    overflow: hidden; /* Added to support image */
+}
+
+.appt-card__patient-name {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--text-primary);
+}
+
+.appt-card__type {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.appt-status-chip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+
+.appt-card__details {
+    display: flex;
+    gap: 24px;
+}
+
+.appt-detail {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
+.appt-detail svg {
+    color: var(--text-muted);
+}
+
+.appt-card__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    border-top: 1px dashed var(--border-light);
+}
+
+.appt-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-complete {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    border-radius: 10px;
+    border: 1.5px solid #10B981;
+    background: #10B981;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px rgba(16, 185, 129, 0.15);
+}
+
+.btn-complete:hover {
+    background: #059669;
+    border-color: #059669;
+    box-shadow: 0 6px 12px rgba(16, 185, 129, 0.25);
+    transform: translateY(-2px);
+}
+
+.btn-cancel {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    border-radius: 10px;
+    border: 1.5px solid #EF4444;
+    background: transparent;
+    color: #EF4444;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-cancel:hover {
+    color: #DC2626;
+    border-color: #DC2626;
+    background: rgba(239, 68, 68, 0.08);
+    transform: translateY(-2px);
+}
+
+.btn-cancel-large {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 14px;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    background: rgba(239, 68, 68, 0.06);
+    color: #EF4444;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-cancel-large:hover {
+    background: rgba(239, 68, 68, 0.12);
+    border-color: #EF4444;
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    border-radius: 10px;
+    border: 1.5px solid var(--color-primary, #3B82F6);
+    color: var(--color-primary, #3B82F6);
+    background: transparent;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+    background: rgba(59, 130, 246, 0.08);
+    transform: translateY(-2px);
+}
+
+.btn-more {
+    padding: 6px;
+    border-radius: 8px;
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+}
+
+.btn-more:hover {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+/* Loading & Empty */
+.appointments-empty {
+    text-align: center;
+    padding: 80px 0;
+    color: var(--text-muted);
+}
+
+.empty-icon {
+    margin-bottom: 20px;
+    opacity: 0.2;
+}
+
+.appointments-loading {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.shimmer-card {
+    height: 160px;
+    background: linear-gradient(90deg, var(--bg-primary) 25%, var(--bg-secondary) 50%, var(--bg-primary) 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 20px;
+    border: 1px solid var(--border-light);
+}
+
+@keyframes shimmer {
+    to {
+        background-position: -200% 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 640px) {
+    .appt-card {
+        flex-direction: column;
+    }
+
+    .appt-card__time-col {
+        width: 100%;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 12px 20px;
+        border-right: none;
+        border-bottom: 1px solid var(--border-light);
+        gap: 12px;
+    }
+
+    .appt-card__details {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .appt-actions {
+        width: 100%;
+    }
+
+    .btn-complete {
+        flex: 1;
+        justify-content: center;
+    }
+}

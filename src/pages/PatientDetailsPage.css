@@ -1,0 +1,283 @@
+.patient-details {
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: fadeIn 0.4s ease-out;
+}
+
+.patient-details__header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 32px;
+    background: var(--bg-primary);
+    padding: 24px;
+    border-radius: 20px;
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-sm);
+}
+
+.back-btn {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-light);
+    color: var(--text-primary);
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.back-btn:hover {
+    background: var(--bg-hover);
+    transform: translateX(-4px);
+}
+
+.patient-details__profile {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex: 1;
+}
+
+.patient-details__avatar {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, #0066CC, #004499);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+.patient-details__name {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin: 0;
+    color: var(--text-primary);
+}
+
+.patient-details__id {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin: 2px 0 0 0;
+}
+
+/* Grid Layout */
+.patient-details__grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+}
+
+.vitals-overview {
+    grid-column: 1 / 2;
+}
+
+.patient-info {
+    grid-column: 2 / 3;
+}
+
+.vitals-history {
+    grid-column: 1 / 3;
+}
+
+/* Details Card */
+.details-card {
+    background: var(--bg-primary);
+    border-radius: 20px;
+    border: 1px solid var(--border-light);
+    padding: 24px;
+    height: 100%;
+    box-shadow: var(--shadow-sm);
+}
+
+.details-card__header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.details-card__header h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0;
+    flex: 1;
+}
+
+.details-card__header .timestamp {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Vitals Metrics */
+.vitals-metrics {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.metric-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    background: var(--bg-secondary);
+    border-radius: 16px;
+    border: 1px solid var(--border-light);
+}
+
+.metric-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.metric-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.metric-info .label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.metric-info .value {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+.metric-info .value small {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+/* Profile Data */
+.profile-data {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.data-row {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed var(--border-light);
+}
+
+.data-row:last-child {
+    border-bottom: none;
+}
+
+.data-row .label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.data-row .value {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.status--active {
+    color: #10B981 !important;
+}
+
+/* History Table */
+.history-table-container {
+    overflow-x: auto;
+}
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.history-table th {
+    text-align: left;
+    padding: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+.history-table td {
+    padding: 16px 12px;
+    font-size: 0.9rem;
+    border-top: 1px solid var(--border-light);
+}
+
+.mini-badge {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* States */
+.patient-details--loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    color: var(--text-muted);
+}
+
+.patient-details--error {
+    text-align: center;
+    padding: 100px 0;
+    color: var(--text-muted);
+}
+
+.patient-details--error button {
+    margin-top: 20px;
+    padding: 10px 24px;
+    background: var(--color-primary);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .patient-details__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .patient-info,
+    .vitals-history {
+        grid-column: 1 / 2;
+    }
+
+    .vitals-metrics {
+        grid-template-columns: 1fr;
+    }
+}

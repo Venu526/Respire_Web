@@ -1,0 +1,177 @@
+.vitals-page {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    animation: fadeInUp 0.4s ease;
+}
+
+.vitals-page--loading {
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+}
+
+.vitals-spinner {
+    width: 32px;
+    height: 32px;
+    border: 3px solid rgba(0, 102, 204, 0.15);
+    border-top-color: #0066CC;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+}
+
+.vitals-page__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.vitals-page__header h1 {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.vitals-page__chart-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    background: rgba(0, 102, 204, 0.08);
+    color: var(--color-primary);
+    border: none;
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background var(--transition-fast);
+}
+
+.vitals-page__chart-btn:hover {
+    background: rgba(0, 102, 204, 0.15);
+}
+
+.vitals-page__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.vital-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    transition: background var(--transition-fast);
+}
+
+.vital-row:hover {
+    background: var(--bg-card-hover);
+}
+
+.vital-row__icon {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.vital-row__info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.vital-row__title {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+}
+
+.vital-row__value {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.vitals-page__empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.vitals-page__empty-icon {
+    color: var(--text-muted);
+}
+
+.vitals-page__empty h3 {
+    color: var(--text-secondary);
+}
+
+.vitals-page__empty p {
+    font-size: var(--font-size-sm);
+    color: var(--text-muted);
+}
+
+.vitals-page__add-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 24px;
+    background: var(--color-primary);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.vitals-page__section h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.vitals-page__actions {
+    display: flex;
+    gap: 12px;
+}
+
+.vitals-quick-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    padding: 16px 8px;
+    background: var(--bg-card);
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: background var(--transition-fast);
+}
+
+.vitals-quick-action:hover {
+    background: var(--bg-card-hover);
+}
+
+.vitals-quick-action__icon {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vitals-quick-action span {
+    font-size: var(--font-size-xs);
+    font-weight: 500;
+    color: var(--text-primary);
+}

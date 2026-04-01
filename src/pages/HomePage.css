@@ -1,0 +1,245 @@
+.home-page {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    animation: fadeInUp 0.4s ease;
+}
+
+.home-page__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home-page__greeting {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+}
+
+.home-page__name {
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin-top: 2px;
+}
+
+/* AI Risk Card */
+.home-page__risk-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+    background: linear-gradient(135deg, #10B981, #059669);
+    border-radius: var(--radius-xl);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    box-shadow: 0 4px 16px rgba(16, 185, 129, 0.3);
+}
+
+.home-page__risk-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(16, 185, 129, 0.35);
+}
+
+.home-page__risk-left {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.home-page__risk-label {
+    font-size: var(--font-size-xs);
+    opacity: 0.8;
+}
+
+.home-page__risk-level {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.home-page__risk-detail {
+    font-size: var(--font-size-xs);
+    opacity: 0.8;
+    margin-top: 4px;
+}
+
+.home-page__risk-icon {
+    opacity: 0.9;
+}
+
+/* Action Tiles */
+.home-page__actions {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.home-page__tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 8px;
+    background: var(--bg-card);
+    border: none;
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.home-page__tile:hover {
+    background: var(--bg-card-hover);
+    transform: translateY(-2px);
+}
+
+.home-page__tile-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-page__tile-label {
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    color: var(--text-primary);
+    text-align: center;
+}
+
+/* Forecast Card */
+.home-page__forecast {
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+}
+
+.home-page__forecast-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.home-page__forecast-text {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Current Vitals */
+.home-page__vitals-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.home-page__vitals-header h3 {
+    font-weight: 700;
+}
+
+.home-page__vitals-link {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: none;
+    border: none;
+    color: var(--color-primary);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+}
+
+.home-page__vitals-time {
+    font-size: var(--font-size-xs);
+    color: var(--text-muted);
+}
+
+.vitals-dark-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.vital-dark-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1c1c1e; /* iOS Dark Card Background */
+    border-radius: var(--radius-lg);
+    padding: 16px;
+    gap: 8px;
+}
+
+.vital-dark-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    margin-bottom: 4px;
+}
+
+.vital-dark-card__value {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.vital-dark-card__label {
+    color: #8e8e93; /* iOS Secondary Label */
+    font-size: var(--font-size-xs);
+    font-weight: 500;
+}
+
+/* Respiratory Footer (WOB, Borg, Device) */
+.vitals-respiratory-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 12px;
+    padding: 0 4px;
+}
+
+.footer-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-secondary, #4b5563);
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.status-dot.healthy {
+    background-color: #34c759;
+}
+
+.status-dot.warning {
+    background-color: #ffcc00;
+}
+
+.device-text {
+    color: #8e8e93; /* Matches "Room Air" color in iOS screenshot */
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .home-page__actions {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .vitals-dark-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
